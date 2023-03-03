@@ -7,6 +7,10 @@ window.addEventListener("load", function(){
             json.sort(function(a, b) {
                 return b.hoursInSpace - a.hoursInSpace
             });
+            insertion.innerHTML += `
+            <div>
+            <h4>Astronaut count: ${json.length}
+            `
             for (let i = 0 ; i < json.length; i++) {
                 if (json[i].active === true){
                 insertion.innerHTML += `
@@ -38,7 +42,6 @@ window.addEventListener("load", function(){
                     `   
                 }
             };
-            
 
         });
 
